@@ -1,0 +1,29 @@
+i.icon{
+  font-size: 2em;  
+  color: white;
+}
+
+/*something that has both classes */
+.container.main {
+    margin-top: 7.0em;
+}
+
+#delete {
+  display: inline;
+}
+
+#navColor {
+ background: #141E30;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#i_icon {
+   color: #141E30;  /* fallback for old browsers */
+
+  padding-left: 30px;
+  position: relative;
+  vertical-align: middle;
+  top: 3px;
+  
+}

@@ -1,0 +1,45 @@
+<% include ./partials/header %>
+
+<!--gives us a centered container-->
+<div class="ui main text container">
+    <div class="ui huge header">RESTful Blog</div>
+    <!--SEGMENT GIVES YOU THE BORDER-->
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% blogs.forEach(function(blog){ %>
+                <div class="item">
+                    <!--constrains size of image to a fixed size-->
+                    <div class="image">
+                         <img src="<%=blog.image %>" >
+                    </div>
+                    <div class="content">
+                         <a class="header" href="/blogs/<%= blog._id%>">
+                             <%=blog.title %>
+                         </a>
+                         <!--place to put information about this particular item-->
+                         <div class="meta">
+                             <span>
+                                 <%= blog.created.toDateString() %>
+                             </span> 
+                         </div>
+                         <div class="description">
+                             <p>
+                                 <%- blog.body.substring(0,100) %>...
+                             </p>
+                         </div>
+                         <div class="extra">
+                             <a class="ui floated basic blue button" href="/blogs/<%= blog._id%>" >
+                                  READ MORE
+                                  <i id="i_icon" class="info circle icon"></i>
+                             </a>
+                         </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+
+
+<% include ./partials/footer %>
